@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { BooksServce } from '../books.service';
 
 @Component({
   selector: 'app-tab',
@@ -6,39 +7,26 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./tab.component.css']
 })
 export class TabComponent implements OnInit {
-  books = [
-    { title: 'Kurz i krew', author: 'Rejmer, Malgorzata', year: '2018'},
-    { title: 'Solaris', author: 'Lem, Stanislaw', year: '2019' },
-    { title: 'Ostre przedmioty', author: 'Flynn, Gillian', year: '2019' },
-    { title: 'Żółte światło', author: 'Pilch, Jerzy', year: '2019' },
-    { title: 'Jak przetrwać wśród czarnych dziur', author: 'Blomquist, Jeff; Goldberg, Dave', year: '2020'}
-  ];
+  books = [];
 
-  // @Input() chosenYear;
   chosenYearFromYearsComponent;
   uniqueYears = [];
+  bookService: BooksServce;
 
-  constructor() {}
+  constructor(bookService: BooksServce) {
+    this.bookService = bookService;
+  }
 
   ngOnInit() {
   }
 
-  onChooseTabComponent(year) {
-    this.chosenYearFromYearsComponent = year;
-    // console.log(this.chosenYearFromYearsComponent);
-    // this.chosenYear = year;
-  }
-
   getBooks() {
-    return this.books.filter((book) => {
-      return book.year === this.chosenYearFromYearsComponent;
-    });
+    this.books = this.bookService.getBooks();
+    return this.books;
   }
 
   getUniqueYears() {
-    const uniqueYears = [...new Set(this.books.map(book => book.year))];
-    this.uniqueYears = uniqueYears;
+    this.uniqueYears = this.bookService.getUniqueYears();
     return this.uniqueYears;
   }
-
 }

@@ -11,6 +11,7 @@ import { TabComponent } from './tab/tab.component';
 import { ItemComponent } from './item/item.component';
 import { YearsComponent } from './years/years.component';
 import { YearItemComponent } from './year-item/year-item.component';
+import { BooksServce } from './books.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { YearItemComponent } from './year-item/year-item.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BooksServce],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

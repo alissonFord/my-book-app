@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BooksServce } from '../books.service';
 
 @Component({
   selector: 'app-years',
@@ -7,14 +8,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class YearsComponent implements OnInit {
   @Input() years;
-  @Output() chosenYearFromYearItem = new EventEmitter<string>();
-  constructor() { }
+  bookService: BooksServce;
+
+  constructor(bookService: BooksServce) {
+    this.bookService = bookService;
+  }
 
   ngOnInit() {
   }
 
-  onChooseYearsComponent(year) {
-    console.log(year);
-    this.chosenYearFromYearItem.emit(year);
-  }
 }
