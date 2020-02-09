@@ -1,19 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BooksServce } from '../books.service';
 
 @Component({
-  selector: 'app-add-book',
+  selector: 'app-new-book',
   templateUrl: './new-book.component.html',
   styleUrls: ['./new-book.component.css']
 })
 export class NewBookComponent implements OnInit {
-  years = [2018, 2019, 2020];
-  constructor() { }
+  bookService: BooksServce;
+
+  constructor(bookService: BooksServce) {
+    this.bookService = bookService;
+   }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    console.log('submitted');
+  onSubmit(submittedForm) {
+    this.bookService.addNewBook(submittedForm.value.title,
+                                submittedForm.value.author,
+                                submittedForm.value.year);
   }
 
 }
