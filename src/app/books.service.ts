@@ -37,3 +37,4 @@ export class BooksServce {
   addNewBook(title, author, year) {
     this.books.push({title, author, year});
   }
+}

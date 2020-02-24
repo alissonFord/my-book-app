@@ -1,6 +1,6 @@
 <app-navigation-bar></app-navigation-bar>
 <div class="container">
-  <form (ngSubmit)="onSubmit(bookForm)" #bookForm="ngForm">
+  <form (ngSubmit)="onSubmit(bookForm); bookForm.reset()" #bookForm="ngForm">
     <div class="form-group">
       <input type="text" id="title" name="title" class="form-control" placeholder="Title" ngModel>
     </div>
