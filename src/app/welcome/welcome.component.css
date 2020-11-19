@@ -1,31 +1,22 @@
 .bg-img{
- height: 100vh;
- width: 100vw;
- background: url('https://ebookfriendly.com/wp-content/uploads/2012/11/Book-iPad-wallpaper-Books.jpg');
- background-position: center;
- background-size: cover;
- position: fixed;
- left: 0;
- justify-content: center;
- align-items: center;
- text-align: center;
+  padding-top: 350px;
+  text-align: center;
+  height: 500px;
  }
 
  .bg-img h1 {
-  font-size: 6em;
-  margin-top: 20%;
-  margin-bottom: 0.5em;
-  color: #FFC204;
+  font-size: 8em;
+  color: #852259;
+  font-weight: 700;
  }
+
 
  .bg-img .btn {
   display: inline-block;
-  width: 200px;
-  border: 1px solid #FFC204;
-  padding: 0.5em;
-  margin-top: 25px;
-  margin-left: 1px;
-  margin-right: 1px;
-  color: #FFC204;
-  font-size: 2em;
+  border: 3px solid #852259;
+  background-color: #852259;
+  padding: 15px;
+  margin: 20px;
+  color: #ccc;
+  font-size: 3em;
 }

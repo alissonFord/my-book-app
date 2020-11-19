@@ -1,5 +1,48 @@
 .container {
-    max-width: 400px;
+    margin-top: 200px;
+    max-width: 50%;
     padding: 60px 12px 10px 10px;
-    position: relative;
+}
+
+.container input {
+  height: 40px;
+  padding: 20x;
+  margin-bottom: 20px;
+  border: 1px solid #F4E9E8;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  font-size: 1.5rem;
+}
+
+.container .submit {
+  height: 50px;
+  padding: 10px 10px;
+  font-size: 2rem;
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+  font-weight: 600;
+}
+
+.container .submit:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #ccc;
+
+}
+
+.book {
+  border: 1px solid #F4E9E8;
+  height: 500px;
+  padding: 20px 30px;
+  border-radius: 6px;
+}
+
+.book h1 {
+  padding: 20px 5px;
+  text-align: center;
+  font-size: 4rem;
 }

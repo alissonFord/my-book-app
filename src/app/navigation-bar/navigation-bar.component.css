@@ -1,5 +1,32 @@
 .navbar {
-  width: 100vw;
+  width: 100%;
   left: 0;
   position: absolute;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: transparent;
+  border: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin-right: 30px;
+}
+
+.navbar ul li {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+
+a {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a:hover {
+  border-bottom: 1px solid #000;
 }

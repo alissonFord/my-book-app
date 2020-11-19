@@ -1,9 +1,6 @@
 
 <app-navigation-bar></app-navigation-bar>
-<div class="btn-group">
-  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose year
-  </button>
+<div class="years">
   <ul class="dropdown-menu">
     <li><a><app-year-item *ngFor="let year of years" [year]="year"></app-year-item></a></li>
   </ul>
