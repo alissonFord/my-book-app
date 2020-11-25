@@ -1,0 +1,10 @@
+li {
+  width: 100%;
+  font-size: 17px;
+  border:none;
+}
+
+li:hover {
+  background-color: #000;
+  color: #ddd;
+}
