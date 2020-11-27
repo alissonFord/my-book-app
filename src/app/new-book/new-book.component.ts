@@ -8,6 +8,7 @@ import { BooksServce } from '../books.service';
 })
 export class NewBookComponent implements OnInit {
   bookService: BooksServce;
+  alert = false;
 
   constructor(bookService: BooksServce) {
     this.bookService = bookService;
@@ -20,6 +21,12 @@ export class NewBookComponent implements OnInit {
     this.bookService.addNewBook(submittedForm.value.title,
                                 submittedForm.value.author,
                                 submittedForm.value.year);
+
+    this.alert = true;
+  }
+
+  closeAlert() {
+    this.alert = false;
   }
 
 }

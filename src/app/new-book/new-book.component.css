@@ -8,7 +8,7 @@
   height: 40px;
   padding: 20x;
   margin-bottom: 20px;
-  border: 1px solid #F4E9E8;
+  border: 1px solid #000;
   border-radius: 4px;
   font-size: 1.5rem;
 }
@@ -36,7 +36,7 @@
 }
 
 .book {
-  border: 1px solid #F4E9E8;
+  border: 1px solid #000;
   height: 500px;
   padding: 20px 30px;
   border-radius: 6px;
@@ -46,4 +46,12 @@
   padding: 20px 5px;
   text-align: center;
   font-size: 4rem;
+}
+
+.alert {
+  text-align: center;
+  font-size: 2rem;
+  background: #339933;
+  color: #fff;
+  border-radius: 5px;
 }

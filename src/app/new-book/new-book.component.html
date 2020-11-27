@@ -2,6 +2,12 @@
 <div class="container">
   <div class="book">
     <h1>Add new book</h1>
+    <div *ngIf="alert" class="alert" role="alert">
+      <span>Success!</span>
+      <button (click)="closeAlert()" type="button" class="close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <form (ngSubmit)="onSubmit(bookForm); bookForm.reset()" #bookForm="ngForm">
       <div class="form-group">
         <input type="text" id="title" name="title" class="form-control" placeholder="Title" ngModel>

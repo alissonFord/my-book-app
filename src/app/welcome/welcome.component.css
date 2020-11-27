@@ -6,17 +6,23 @@
 
  .bg-img h1 {
   font-size: 8em;
-  color: #852259;
+  color: #000;
   font-weight: 700;
  }
 
 
  .bg-img .btn {
   display: inline-block;
-  border: 3px solid #852259;
-  background-color: #852259;
+  border: 3px solid #000;
+  background-color: transparent;
   padding: 15px;
   margin: 20px;
-  color: #ccc;
+  color: #000;
   font-size: 3em;
+  font-weight: 600;
+}
+
+.bg-img .btn:hover {
+  color: #fff;
+  background-color: #000;
 }
