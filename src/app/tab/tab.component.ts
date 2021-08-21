@@ -22,11 +22,9 @@ export class TabComponent implements OnInit {
 
   getBooks() {
     this.books = this.bookService.getBooks();
-    return this.books;
   }
 
   getUniqueYears() {
     this.uniqueYears = this.bookService.getUniqueYears();
-    return this.uniqueYears;
   }
 }
